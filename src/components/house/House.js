@@ -22,9 +22,9 @@ export default class House extends Component {
                     console.log(home)
                     return (
                         <div key={home.house_id} >
-                            <h3>{home.house_name}</h3>
-                            <h4>{home.house_address}</h4>
-                            <h4>{home.house_price}</h4>
+                            <h6>{home.house_name}</h6>
+                            <p>{home.house_address}</p>
+                            <p>{home.city} {home.state} {home.zipcode}</p>
                             <button onClick={() => this.props.delete(home.house_id)} >Delete</button>
                         </div>
                     )

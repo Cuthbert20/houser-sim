@@ -45,13 +45,15 @@ export default class Dashboard extends Component {
             <div>
             <h2>{elm.house_name}</h2>
         <h6>{elm.house_address}</h6>
+        <h6>{elm.city}</h6>
+        <h6>{elm.state} {elm.zipcode}</h6>
             </div>
         ))
         return (
             <div>
                 Dashboard is where you are now
                 <House key={this.state.house.house_id}  house={this.state.house} delete={this.deleteHouse} />
-                {houses}
+                {/* {houses} */}
                 <Switch>
                     <Link to="/wizard" ><button>Add New Property</button></Link>
                 </Switch>

@@ -12,4 +12,9 @@ VALUES
 ('blue house', 85858, '145 dill ave'),
 ('green house', 99999, '594 sexy lane')
 
+ALTER TABLE house
+ADD rent INT;
+
 SELECT * FROM house;
+
+-- https://cdn.pixabay.com/photo/2016/11/18/17/46/architecture-1836070__340.jpg
