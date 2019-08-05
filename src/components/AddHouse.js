@@ -1,20 +1,36 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import store from '../store'
 
 export default class AddHouse extends Component {
     constructor(){
         super()
+        const reduxState = store.getState()
+        console.log(reduxState)
 
         this.state = {
-            name: '',
-            address: '',
-            city: '',
-            state: '',
-            zipcode: '',
+            name: reduxState.name,
+            address: reduxState.address,
+            city: reduxState.city,
+            state: reduxState.state,
+            zipcode: reduxState.zipcode
         }
         this.newHome = this.newHome.bind(this)
         
+    }
+    componentDidMount(){
+        //subscribe runs every time something changes on state
+        store.subscribe(() => {
+            const reduxState = store.getState()
+            this.setState({
+                name: reduxState.name,
+                address: reduxState.address,
+                city: reduxState.city,
+                state: reduxState.state,
+                zipcode: reduxState.zipcode
+            })
+        })
     }
     handleChange(prop,val) {
         console.log('val', val)
