@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 // import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 
 export default class AddImage extends Component {
@@ -23,6 +24,11 @@ export default class AddImage extends Component {
         return(
             <div>
                 <input onChange={e => this.handleChange('image', e.target.value)} placeholder="House Image" type="text"/>
+                <br/> 
+                 <Link to="/wizard/step1" ><button>Step 1</button> </Link>
+                 <span>   </span>   
+                <Link to="/wizard/step3" ><button>Step 3</button></Link>
+                
             </div>
             )
     }

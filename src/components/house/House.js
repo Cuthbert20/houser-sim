@@ -25,6 +25,7 @@ export default class House extends Component {
                             <h6>{home.house_name}</h6>
                             <p>{home.house_address}</p>
                             <p>{home.city} {home.state} {home.zipcode}</p>
+                            <img src={home.image} alt=""/>
                             <button onClick={() => this.props.delete(home.house_id)} >Delete</button>
                         </div>
                     )

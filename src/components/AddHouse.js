@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 export default class AddHouse extends Component {
     constructor(){
@@ -54,6 +55,7 @@ export default class AddHouse extends Component {
                 <p>Zipcode</p>
                 <input onChange={e => this.handleChange('zipcode', e.target.value)} placeholder="zipcode" type="text"/>
                 <hr/>
+                <Link to="/wizard/step2" ><button>Step 2</button></Link>
                 <button onClick={this.newHome} > submit </button>
             </div>
         )
