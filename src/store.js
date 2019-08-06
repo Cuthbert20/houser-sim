@@ -3,8 +3,8 @@ import {createStore} from 'redux'
 //inital state
 
 const initalState = {
-    name: '',
-    address: '',
+    house_name: '',
+    house_address: '',
     city: '',
     state: '',
     zipcode: '',

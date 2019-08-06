@@ -10,8 +10,8 @@ export default class AddHouse extends Component {
         // console.log(reduxState)
 
         this.state = {
-            name: reduxState.name,
-            address: reduxState.address,
+            house_name: reduxState.house_name,
+            house_address: reduxState.house_address,
             city: reduxState.city,
             state: reduxState.state,
             zipcode: reduxState.zipcode
@@ -67,9 +67,9 @@ export default class AddHouse extends Component {
         return(
             <div>
                 <p>Name</p>
-                <input onChange={e => this.handleChange('name', e.target.value)} value={this.state.name} placeholder="name" type="text"/>
+                <input onChange={e => this.handleChange('house_name', e.target.value)} value={this.state.house_name} placeholder="name" type="text"/>
                 <p>Address</p>
-                <input onChange={e => this.handleChange('address', e.target.value)} value={this.state.address} placeholder='address' type="text"/>
+                <input onChange={e => this.handleChange('house_address', e.target.value)} value={this.state.house_address} placeholder='address' type="text"/>
                 <p>City</p>
                 <input onChange={e => this.handleChange('city', e.target.value)} value={this.state.city} placeholder="city" type="text"/>
                 <p>State</p>
