@@ -19,7 +19,7 @@ export default class House extends Component {
             <div>
                 House
                 {this.props.house.map(home => {
-                    console.log(home)
+                    // console.log(home)
                     return (
                         <div key={home.house_id} >
                             <h6>{home.house_name}</h6>

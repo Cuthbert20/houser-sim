@@ -17,7 +17,7 @@ module.exports = {
     deleteHome: async (req,res) => {
         const { id } = req.params
         const db = await req.app.get('db')
-        const result = await db.delete_home([id])
+        db.delete_home([id])
         const all = await db.all_homes()
 
         res.status(200).send(all)

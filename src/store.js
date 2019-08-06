@@ -11,15 +11,21 @@ const initalState = {
     image: '',
     mortgage: '',
     rent: ''
-
 }
 //ACTION TYPES if we are going to call an action it has to be assigned to a CONST Variable.
-export const NEW_HOME = 'NEW_HOME'
+export const STEP_ONE = 'STEP_ONE'
+export const STEP_TWO = 'STEP_TWO'
+export const STEP_THREE = 'STEP_THREE'
 
 function reducer(state = initalState, action) {
+    console.log(action)
     switch(action.type) {
-        case NEW_HOME:
-            var newHome = {}
+        case STEP_ONE:
+            return {...state,...action.payload}
+        case STEP_TWO:
+            return {...state,...action.payload}
+        case STEP_THREE:
+            return {...state,...action.payload}
         default:
             return state
     }
