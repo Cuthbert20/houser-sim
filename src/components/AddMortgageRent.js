@@ -19,6 +19,7 @@ export default class AddMortgageRent extends Component{
         })
     }
     submit = () => {
+        console.log(store)
         store.dispatch({
             type: STEP_THREE,
             payload: this.state

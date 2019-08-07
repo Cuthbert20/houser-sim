@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import axios from 'axios'
 import { Link } from 'react-router-dom'
-import store, { STEP_ONE } from '../store'
+import store, { STEP_ONE, CANCEL } from '../store'
 
 export default class AddHouse extends Component {
     constructor(){
@@ -63,6 +62,12 @@ export default class AddHouse extends Component {
             payload: this.state
         })
     }
+    cancel(){
+        console.log(store.dispatch)
+        store.dispatch({
+            type: CANCEL
+        })
+    }
     render(){
         return(
             <div>
@@ -78,6 +83,7 @@ export default class AddHouse extends Component {
                 <input onChange={e => this.handleChange('zipcode', e.target.value)} value={this.state.zipcode} placeholder="zipcode" type="text"/>
                 <hr/>
                 <Link to="/wizard/step2" ><button onClick={this.stepTwo} >Step 2</button></Link>
+                <Link to='/' ><button onClick={this.cancel} >Cancel</button></Link>
                 {/* <button onClick={this.newHome} > submit </button> */}
             </div>
         )

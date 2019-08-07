@@ -16,6 +16,7 @@ const initalState = {
 export const STEP_ONE = 'STEP_ONE'
 export const STEP_TWO = 'STEP_TWO'
 export const STEP_THREE = 'STEP_THREE'
+export const CANCEL = 'CANCEL'
 
 function reducer(state = initalState, action) {
     console.log(action)
@@ -26,6 +27,8 @@ function reducer(state = initalState, action) {
             return {...state,...action.payload}
         case STEP_THREE:
             return {...state,...action.payload}
+        case CANCEL:
+            return {...state}
         default:
             return state
     }
